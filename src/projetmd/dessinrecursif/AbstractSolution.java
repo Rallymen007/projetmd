@@ -31,7 +31,8 @@ public abstract class AbstractSolution extends Frame {
 		int frameWidth = getSize().width;   
 		g2d.setColor(Color.black);
 		
-		drawSolutionk(g2d, frameWidth/10, frameHeight/10, frameWidth/3, profondeur);
+		//drawSolutionk(g2d, frameWidth/10, frameHeight/10, frameWidth/3, profondeur);
+		drawSolutionk(g2d, 3*frameWidth/8, 3*frameHeight/8, frameWidth/4, profondeur);
 	}
 
 	/** drawSolutionk 
