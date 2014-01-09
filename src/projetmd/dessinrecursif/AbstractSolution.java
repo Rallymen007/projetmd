@@ -29,17 +29,37 @@ public abstract class AbstractSolution extends Frame {
 
 		int frameHeight = getSize().height;
 		int frameWidth = getSize().width;   
+		
 		g2d.setColor(Color.black);
 		
-		//drawSolutionk(g2d, frameWidth/10, frameHeight/10, frameWidth/3, profondeur);
-		drawSolutionk(g2d, 3*frameWidth/8, 3*frameHeight/8, frameWidth/4, profondeur);
+		
+		// Parametres recommandes pour Fk
+		if(this instanceof FkSolution){
+			drawSolutionk(g2d, frameWidth/10, frameHeight/10, frameWidth/3, profondeur);
+		}
+		
+		// Parametres recommandes pour F2k
+		if(this instanceof F2kSolution){
+			drawSolutionk(g2d, frameWidth/2, frameHeight/2, frameWidth/3, profondeur);
+		}
+		
+		// Parametres recommandes pour F3k
+		if(this instanceof F3kSolution){
+			drawSolutionk(g2d, 3*frameWidth/8, 3*frameHeight/8, frameWidth/4, profondeur);
+		}
+
+		// Parametres recommandes pour Fart
+		if(this instanceof FartSolution){
+			g2d.clearRect(0, 0, frameWidth, frameHeight);
+			drawSolutionk(g2d, frameWidth/2, frameHeight/2, frameWidth/3, profondeur);
+		}
 	}
 
 	/** drawSolutionk 
 	 *  Produit un dessin recursif
 	 * Parametres: 
 	 *    Graphics drawingArea : L'objet graphique dans lequel on dessine
-	 *    int ... arg : les coordonnées, longueur et autres si besoin, et profondeur de récursivité
+	 *    int ... arg : les coordonnï¿½es, longueur et autres si besoin, et profondeur de rï¿½cursivitï¿½
 	 **/ 
 	public abstract void drawSolutionk(Graphics drawingArea, int ... arg) ;
 

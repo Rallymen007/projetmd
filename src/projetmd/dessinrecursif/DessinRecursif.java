@@ -6,7 +6,7 @@ public class DessinRecursif {
 		//new FkSolution(6);
 		//new F2kSolution(6);
 		//new F3kSolution(3);
-		new FlelSolution(4);
+		new FartSolution(10);
 	}
 
 }
